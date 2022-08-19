@@ -4,6 +4,7 @@ import LocationInfo from './Components/LocationInfo'
 import CardResident from './Components/CardResident'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Logo from './assets/logo.png'
 
 function App() {
   const [location, setLocation] = useState()
@@ -41,14 +42,20 @@ function App() {
 
   return (
     <div className="App">
-      <h1>App Rick and Morthy</h1>
-      <LocationInfo location={location} />
-      <form onSubmit={handleSubmit}>
-        <input id='search' type="text" />
-        <button>Search</button>
-      </form>
+      <figure className='logo'>
+				<img src={Logo} alt='Logo de Rick & Morty' />
+			</figure>
+      <div className='logo'>
+        <LocationInfo location={location} />
+      </div>
+      <div className='logo'>
+        <form onSubmit={handleSubmit}>
+          <input id='search' type="text" />
+          <button>Search</button>
+        </form>
+      </div>
       
-      <div>
+      <section className='list-person'>
         {
           location?.residents.map(url => (
             <CardResident 
@@ -57,7 +64,7 @@ function App() {
             />
           ))
         }
-      </div>
+      </section>
 
     </div>
   )

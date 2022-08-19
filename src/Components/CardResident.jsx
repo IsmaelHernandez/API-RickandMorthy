@@ -7,24 +7,28 @@ const CardResident = ({url}) => {
     console.log(resident)
     
   return (
-    <div>
-        <article>
-          <header>
-            <img src={resident?.image} alt={`image of ${resident?.name}`} />
-            <div>
-              <div></div>
-              <p>{resident?.status}</p>
-            </div>
-          </header>
-          <div>
-            <h3>{resident?.name}</h3>
-            <ul>
-              <li><span>Specie:</span>{resident?.species}</li>
-              <li><span>Origin:</span>{resident?.origin.name}</li>
-              <li><span>Episodes where appear:</span>{resident?.episode.length}</li>
-            </ul>
-          </div>
-        </article>
+    <div className='container'>
+      <section className='person'>
+			<div className='person-header'>
+				<div className='state'>
+					<span className={resident?.status}></span>
+					<h4>{resident?.status}</h4>
+				</div>
+			</div>
+
+			<div className='person-body'>
+				<figure>
+					<img src={resident?.image} alt={`image of ${resident?.name}`} />
+				</figure>
+
+				<h2>{resident?.name}</h2>
+				<ul>
+          <li><span>Specie:</span>{resident?.species}</li>
+          <li><span>Origin:</span>{resident?.origin.name}</li>
+          <li><span>Episodes where appear:</span>{resident?.episode.length}</li>
+        </ul>
+			</div>
+		</section>
     </div>
   )
 }
