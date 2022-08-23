@@ -50,8 +50,8 @@ function App() {
       </div>
       <div className='logo'>
         <form onSubmit={handleSubmit}>
-          <input id='search' type="text" />
-          <button>Search</button>
+          <input className='header-form-input' id='search' type="text" />
+          <button className='header-form-btn'>Search</button>
         </form>
       </div>
       

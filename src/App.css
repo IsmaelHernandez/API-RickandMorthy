@@ -26,6 +26,19 @@ ul{
 	list-style: none;
 }
 
+.header-form-input{
+    border-radius: 10px;
+}
+.header-form-input{
+  color: white;
+  border-radius: 10px;
+
+}
+.header-form-btn{
+	border-radius: 10px;
+  
+  }
+
 .container {
 	width: 90%;
 	max-width: 120rem;
