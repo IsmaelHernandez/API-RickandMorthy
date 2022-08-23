@@ -22,11 +22,13 @@ const CardResident = ({url}) => {
 				</figure>
 
 				<h2>{resident?.name}</h2>
-				<ul>
-          <li><span>Specie:</span>{resident?.species}</li>
-          <li><span>Origin:</span>{resident?.origin.name}</li>
-          <li><span>Episodes where appear:</span>{resident?.episode.length}</li>
-        </ul>
+				<div className='card-list'>
+					<ul>
+						<li><span>Specie:</span>{resident?.species}</li>
+						<li><span>Origin:</span>{resident?.origin.name}</li>
+						<li><span>Episodes where appear:</span>{resident?.episode.length}</li>
+					</ul>
+				</div>
 			</div>
 		</section>
     </div>
